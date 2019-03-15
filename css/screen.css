@@ -140,6 +140,11 @@ h6 {
     margin: 0 0 24px;
 }
 
+*+h2{
+    margin-top: 48px;
+}
+
+
 p,
 ol,
 ul,
