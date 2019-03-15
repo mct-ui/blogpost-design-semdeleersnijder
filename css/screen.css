@@ -1,53 +1,40 @@
-/*elements fonts
-
-    @fonst-face declarations
+/*
+    Fonts
+    ---
+    @font-face declaration
 */
-
 @font-face{
-    font-family: "Inter UI web";
+    font-family: "Inter UI"
     font-weight: 400;
-    src: url("../fonts/Inter-UI-Regular.woff2") format("woff2"),
-         url("../fonts/Inter-UI-Regular.woff") format("woff");
+    src: url("../fonts/Inter-UI-Regular.woff2") format("woff2");
 }
-
+@font-face{
+    font-family: "Inter UI"
+    font-weight: 700;
+    src: url("../fonts/Inter-UI-Bold.woff2") format("woff2");
+}
 @font-face {
-    font-family:"Inter UI web";
-    font-weight: 700;
-    src:url("../fonts/Inter-UI-Bold.woff2") format("woff2"),
-        url("../fonts/Inter-UI-Bold.woff") format("woff");
+    font-family: "Droid Serif";
+    font-weight: 400;
+    src:url(".../fonts/DroidSerif-Regular-webfont.woff") format("woff");
 }
-
-@font-face{
+@font-face {
     font-family: "Droid Serif";
     font-weight: 400;
     font-style: italic;
-    src: url("../fonts/DroidSerif-Regular-webfont.woff") format("woff"),
-
+    src:url(".../fonts/DroidSerif-Italic-webfont.woff") format("woff");
 }
-
-@font-face{
-    font-family: "Droid Serif";
-    font-weight: 400;
-    font-style: italic;
-    src: url("../fonts/DroidSerif-Italic-webfont.woff") format("woff"),
-
-}
-
-@font-face{
+@font-face {
     font-family: "Droid Serif";
     font-weight: 700;
-    src: url("../fonts/DroidSerif-Bold-webfont.woff") format("woff"),
-
+    src:url(".../fonts/DroidSerif-Bold-webfont.woff") format("woff");
 }
-
-@font-face{
+@font-face {
     font-family: "Droid Serif";
     font-weight: 700;
     font-style: italic;
-    src: url("../fonts/DroidSerif-BoldItalic-webfont.woff") format("woff"),
-
+    src:url(".../fonts/DroidSerif-BoldItalic-webfont.woff") format("woff");
 }
-
 
 /*
     Elements: Page
@@ -55,26 +42,25 @@
     Default markup for page level elements
 */
 
-
-
-
 html {
     font-size: 16px;
     line-height: 1.5;
     font-family: "Droid Serif", Georgia, serif;
     color: #5C6366;
+    padding: 48px 24px 24px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after{
+*, *:before, *:after {
     box-sizing: inherit;
 }
 
-
+body {
+    max-width: 42em;
+    margin: 0 auto;
+}
 
 /*
  * Remove text-shadow in selection highlight:
@@ -84,8 +70,8 @@ html {
  */
 
 ::selection {
-    background: #00E6A1;
-    color: white;
+    background: #e85e00;
+    color: #00E6A1;
     text-shadow: none;
 }
 
@@ -105,19 +91,13 @@ img {
     ---
     Default markup for typographic elements
 */
-h1,
-h2,
-h3{
+h1, h2, h3{
     color: #17181A;
-    font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
+    font-family: "Inter UI" "Helvetica Neue", Helvetica, arial, sans-serif;
 }
 
-
-
-h1 {
-
+h1{
     font-size: 36px;
-
     line-height: 40px;
     margin: 0 0 24px;
     font-family: "Playfair Display", serif;
@@ -127,6 +107,9 @@ h2 {
     font-size: 23px;
     line-height: 32px;
     margin: 0 0 24px;
+}
+*+h2{
+    margin-top: 48px;
 }
 
 h3 {
@@ -141,67 +124,6 @@ h6 {
     font-size: 16px;
     line-height: 24px;
     margin: 0 0 24px;
-}
-
-*+h2{
-    margin-top: 48px;
-}
-
-/*
-    components: Author
-*/
-.c-author{
-    display: flex;
-    align-items: center;
-}
-
-.c-author_image{
-    width: 56px;
-    height: 56px;
-    border-radius: 100%;
-}
-
-.c-author_name,
-.c-author__meta{
-    margin-bottom: 0;
-}
-
-.c-author__meta{
-    font-size: 14px;
-    font-family: "Inter UI web", "Helvetica Neue", Helvetica, arial, sans-serif;
-    line-height: 16px;
-    margin-top: 4px;
-}
-
-.c-author_name{
-    font-size: 16px;
-    line-height: 16px;
-}
-
-.c-author_image{
-    width: 56px;
-    height: 56px;
-    border-radius: 100%;
-    margin-right: 16px;
-
-}
-
-/*
-  Components: Article
-*/
-
-.c-article__header,
-.c-article__body{
-    max-width: 1200px;
-    margin: 0 atuo;
-}
-
-.c-article__header{
-    padding: 24px 24px 0;
-}
-
-.c-article__body{
-    padding: 0 24px;
 }
 
 p,
@@ -258,66 +180,149 @@ a {
 
 a:visited,
 a:active {
-    color: #00A1E6;
+    color: #00E6A1;
 }
 
 a:hover,
 a:focus {
-    color: green;
+    color: #1ABAFF;
 }
-
 
 /* Small devices (landscape phones, 576px and up) */
 
-@media (min-width: 576px) {}
-
-/* Medium devices (tablets, 768px and up) */
-
-@media (min-width: 768px) {
-    html {
-        padding: 48px 48px 24px;
+@media (min-width: 360px) {
+    html{
+        padding: 6px 5px;
     }
-    h1 {
-        font-size: 58px;
-        line-height: 64px;
+    .c-article__header {
+        padding: 12px 12px;
     }
-    .c-article__header{
-        padding: 48px 48px 24px;
-    }
-    .c-article__author{
+    .c-article__author {
         padding-bottom: 24px;
     }
-    .c-article__body{
+    .c-article__body {
         padding: 24px 48px;
     }
-}
-
-/* Large devices (landscape tablets, desktops, 992px and up) */
-
-@media (min-width: 992px) {
-    .c-article__body{
-        dislay: flex;
-        flex-wrap: wrap;
+    .c-article__date{
+        padding: 6px 12px;
+    }
+    h1{
+        width: 100%;
     }
 
-    .c-article__author{
-        display: block;
-    }
-
-    .c-author_image{
-        margin-bottom: 16px;
-    }
-    .c-article__content{
-        width: 75%
-    }
-}
-.u-max-width-sm{
-    max-width: 36em;
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {}
+
+/*
+    Components: Author
+*/
+.c-author{
+    display: flex;
+    align-items: center;
+}
+.c-author__image{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    margin-right: 16px;
+}
+.c-author__name, .c-author__meta{
+    margin-bottom: 0;
+}
+.c-author__meta{
+    font-size: 14px;
+    font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
+    line-height: 16px;
+    margin-top: 4px;
+}
+.c-author__name{
+    font-size: 16px;
+    line-height: 16px;
+}
+
+/*
+    Components: Article
+*/
+.c-article__body, .c-article__header {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.c-article__header {
+    padding: 24px 24px 0;
+}
+.c-article__body {
+    padding: 0 24px;
+}
+.c-article__date{
+    margin-bottom: 6px;
+    height: 24px;
+    width: auto;
+}
+
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    .c-article__header {
+        padding: 12px 12px;
+    }
+    .c-article__author {
+        padding-bottom: 24px;
+    }
+    .c-article__body {
+        padding: 24px 48px;
+    }
+    .c-article__date{
+        padding: 6px 12px;
+    }
+    h1{
+        padding: 0px 12px;
+    }
+
+}
+
+/* Large devices (landscape tablets, desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    body{
+        max-width: 1000px;
+    }
+    .c-article{
+        width: 100%;
+    }
+    .c-article__body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .c-article__author {
+        display: flex;
+        width: 25%;
+        padding-right: 75px;
+    }
+    .c-article__content {
+        width: 75%;
+    }
+    .c-author {
+        display: block;
+
+    }
+
+    .c-author__name {
+        margin-top: 5px;
+
+    }
+    h1{
+        font-size: 40px;
+        line-height: 40px;
+        margin: 0 0 24px;
+        font-family: "Playfair Display", serif;
+    }
+
+}
 
 /*
     Print styles.
@@ -384,4 +389,24 @@ a:focus {
     h3 {
         page-break-after: avoid;
     }
+}
+
+/*
+    Utilities: max-width
+    ---
+*/
+.u-max-with-sm {
+    max-width: 36em;
+}
+
+/*
+    Components: blockquote
+*/
+.c-blockquote{
+    background: hsla(165, 70%, 90%, 0.5);
+    color: #00B37D;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
 }
