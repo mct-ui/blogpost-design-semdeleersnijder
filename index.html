@@ -19,11 +19,12 @@
         <link rel="stylesheet" href="css/screen.css">
     </head>
     <body>
-        <header>
-            <p><time datetime="2018-17-02">17 februari 2018</time></p>
+    <article class="c-article">
+        <header class="c-article__header">
+            <p class="c-type-meta u-margin-bottom-xs"><time datetime="2018-17-02">17 februari 2018</time></p>
             <h1>Balancing Line Length And Font Size In Responsive Web Design</h1>
         </header>
-        <figure>
+        <figure class="c-article_image">
             <picture>
                 <source srcset="img/picture@2x.jpg" media="(min-width: 1200px)">
                 <source srcset="img/picture.jpg" media="(min-width: 992px)">
@@ -33,19 +34,25 @@
             </picture>
         </figure>
 
-        <div class="c-author">
+        <div class="c-author__body">
+            <div class="c-article__author">
+                <figure classs="c-author">
             <img class="c-author_image" src="img/avatar.jpg" alt="Simon Coudivelle">
-            <div class="c-author_caption">
-                <h2 class="c-author_name">Simon Coudivelle</h2>
-                <p class="c-author__meta">User Interface Designer
+            <figcaption class="c-author_caption">
+                <h3 class="c-author_name">Simon Coudivelle</h3>
+                <p class="c-author__meta">
                     <span>
                         <span></span>
                     </span>
 
-                </p>
-            </div>
+                    </p>
+                </figcaption>
+                </figure>
+
         </div>
-        
+    </div>
+    <div class="c-article__content">
+        <div class="u-max-width-sm">
         <p>
             As we refine our methods of responsive web design,* we’ve increasingly focus*ed on measure (another word for “line length”) and its relationship to how people read. The popularization of the “ideal measure” has led to advice such as “Increase font size for large screens and reduce font size for small screens.” While a good measure does improve the reading experience, it’s only one rule for good typography. Another rule is to maintain a comfortable font size.
         </p>
@@ -77,4 +84,6 @@
             Typographers have been writing about the relationship between horizontal and vertical eye motion for almost a century. In 1928, Jan Tschichold dismissed centered text and advocated for left-aligned text. He argued that this would assist readers by providing a consistent left (vertical) edge for the eye to return to after finishing each (horizontal) line.
         </p>
     </body>
+</div>
+</article>
 </html>

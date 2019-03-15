@@ -63,15 +63,18 @@ html {
     line-height: 1.5;
     font-family: "Droid Serif", Georgia, serif;
     color: #5C6366;
-    padding: 48px 24px 24px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
 }
 
-body {
-    max-width: 42em;
-    margin: 0 auto;
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
 }
+
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -180,6 +183,25 @@ h6 {
     height: 56px;
     border-radius: 100%;
     margin-right: 16px;
+
+}
+
+/*
+  Components: Article
+*/
+
+.c-article__header,
+.c-article__body{
+    max-width: 1200px;
+    margin: 0 atuo;
+}
+
+.c-article__header{
+    padding: 24px 24px 0;
+}
+
+.c-article__body{
+    padding: 0 24px;
 }
 
 p,
@@ -244,6 +266,7 @@ a:focus {
     color: green;
 }
 
+
 /* Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) {}
@@ -258,11 +281,39 @@ a:focus {
         font-size: 58px;
         line-height: 64px;
     }
+    .c-article__header{
+        padding: 48px 48px 24px;
+    }
+    .c-article__author{
+        padding-bottom: 24px;
+    }
+    .c-article__body{
+        padding: 24px 48px;
+    }
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up) */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .c-article__body{
+        dislay: flex;
+        flex-wrap: wrap;
+    }
+
+    .c-article__author{
+        display: block;
+    }
+
+    .c-author_image{
+        margin-bottom: 16px;
+    }
+    .c-article__content{
+        width: 75%
+    }
+}
+.u-max-width-sm{
+    max-width: 36em;
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 
